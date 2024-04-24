@@ -18,6 +18,9 @@
 
 if [ "$2" = true ] ; then
 
+    echo activating venv
+    source .venv/bin/activate
+    
     echo Running: pylint $8 $1
 
     pylint $8 $1
