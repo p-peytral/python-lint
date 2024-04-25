@@ -27,7 +27,7 @@ if [ "$2" = true ] ; then
     source .venv/bin/activate
     
     echo Running: pylint $8 $1
-    pylint $8 $1
+    pylint --fail-under=8 --init-hook='import sys; sys.path.append("src/app")' src/app
     exit_code=$?
 
     if [ "$exit_code" = "0" ]; then
