@@ -21,10 +21,8 @@ if [ "$2" = true ] ; then
     echo installing dependencies
     pip install --upgrade pip
     python3 -m venv .venv
-    pip install -r src/requirements.txt
-    
-    echo activating venv
     source .venv/bin/activate
+    pip install -r src/requirements.txt
     
     echo Running: pylint
     pylint src/app
