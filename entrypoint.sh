@@ -18,11 +18,13 @@
 
 if [ "$2" = true ] ; then
 
+    echo installing dependencies
+    pip install -r requirements.txt
+    
     echo activating venv
     source .venv/bin/activate
     
     echo Running: pylint $8 $1
-
     pylint $8 $1
     exit_code=$?
 
