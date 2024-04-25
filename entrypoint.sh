@@ -19,6 +19,7 @@
 if [ "$2" = true ] ; then
 
     echo installing dependencies
+    pip install --upgrade pip
     python3 -m venv .venv
     pip install -r src/requirements.txt
     
