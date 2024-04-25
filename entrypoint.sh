@@ -19,7 +19,8 @@
 if [ "$2" = true ] ; then
 
     echo installing dependencies
-    pip install -r requirements.txt
+    python3 -m venv .venv
+    pip install -r src/requirements.txt
     
     echo activating venv
     source .venv/bin/activate
